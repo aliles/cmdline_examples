@@ -33,10 +33,13 @@ The programs
 The following example applications demonstrate using standard library modules
 for command line parsing.
 
-* ``tw_getopt.py``, the `getopt
-  <https://docs.python.org/dev/library/getopt.html>`_ module
+* ``tw_getopt.py``, the `getopt`_ module.
 
-While the following examples demonstrate third party packages from PyPI.
+.. _getopt: https://docs.python.org/dev/library/getopt.html
 
-* ``tw_begins.py``, the `begins
-  <https://pypi.python.org/pypi/begins>`_ package.
+While the following example applications demonstrate using third party packages
+from PyPI.
+
+* ``tw_begins.py``, the `begins`_ package.
+
+.. _begins: https://pypi.python.org/pypi/begins
