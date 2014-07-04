@@ -22,7 +22,7 @@ def retweets():
     for status in begin.context.api.retweets:
         print u"%s: %s" % (status.user.screen_name, status.text)
 
-@begin.start(env_prefix='')
+@begin.start(env_prefix='', short_args=False)
 def main(api_key='', api_secret='', access_token='', access_secret=''):
     """Minimal Twitter client
 
