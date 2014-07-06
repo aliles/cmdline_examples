@@ -34,8 +34,10 @@ The following example applications demonstrate using standard library modules
 for command line parsing.
 
 * ``tw_getopt.py``, the `getopt`_ module.
+* ``tw_optparse.py``, the `optparse`_ module.
 
 .. _getopt: https://docs.python.org/dev/library/getopt.html
+.. _optparse: https://docs.python.org/dev/library/optparse.html
 
 While the following example applications demonstrate using third party packages
 from PyPI.
