@@ -42,6 +42,8 @@ for command line parsing.
 While the following example applications demonstrate using third party packages
 from PyPI.
 
+* ``tw_cliff.py``, the `cliff`_ package.
 * ``tw_begins.py``, the `begins`_ package.
 
+.. _cliff: http://cliff.readthedocs.org/en/latest/index.html
 .. _begins: https://pypi.python.org/pypi/begins
