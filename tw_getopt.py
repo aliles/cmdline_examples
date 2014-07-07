@@ -5,7 +5,7 @@ import os
 
 import twitterlib
 
-# Maps command line flags to environment variables
+# Maps command line flags to environment variables.
 ENV_VARS = {
     '--api-key': 'API_KEY',
     '--api-secret': 'API_SECRET',
@@ -13,7 +13,7 @@ ENV_VARS = {
     '--access-secret': 'ACCESS_SECRET'
 }
 
-# Process command line using getopt module
+# Process command line using getopt module.
 def parse_commandline(args=None):
     "Process command line using getopt"
     args = sys.argv[1:] if args is None else args
@@ -30,7 +30,7 @@ def parse_commandline(args=None):
         opts[flag] = os.environ[ENV_VARS[flag]]
     return opts, args
 
-# Sub-commands for select Twitter feeds
+# Sub-commands for select Twitter feeds.
 def timeline(api):
     "Display recent tweets from users timeline"
     for status in api.timeline:
@@ -46,14 +46,14 @@ def retweets(api):
     for status in api.retweets:
         print u"%s: %s" % (status.user.screen_name, status.text)
 
-# Maps sub-command names to function calls
+# Maps sub-command names to function calls.
 SUB_COMMANDS = {
     'timeline': timeline,
     'mentions': mentions,
     'retweets': retweets
 }
 
-# Command line execution
+# Command line execution.
 if __name__ == '__main__':
     opts, args = parse_commandline()
     api = twitterlib.API(

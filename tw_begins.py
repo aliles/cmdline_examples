@@ -4,8 +4,8 @@ import begin
 import twitterlib
 
 
-# sub-command definitions using subcommand decorator for each sub-command that
-# implements a timeline display
+# Sub-command definitions using subcommand decorator for each sub-command that
+# implements a timeline display.
 @begin.subcommand
 def timeline():
     "Display recent tweets from users timeline"
@@ -24,8 +24,8 @@ def retweets():
     for status in begin.context.api.retweets:
         print u"%s: %s" % (status.user.screen_name, status.text)
 
-# program main definition replace __name__ === '__main__' magic
-# sub-commands are registered and loaded automatically
+# Program main definition replace __name__ === '__main__' magic
+# sub-commands are registered and loaded automatically.
 @begin.start(env_prefix='', short_args=False)
 def main(api_key='', api_secret='', access_token='', access_secret=''):
     """Minimal Twitter client

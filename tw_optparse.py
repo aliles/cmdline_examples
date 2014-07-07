@@ -5,7 +5,7 @@ import os
 
 import twitterlib
 
-# Process command line using OptionParser
+# Process command line using OptionParser.
 def parse_commandline(args=None):
     "Process command line using optparse"
     parser = OptionParser()
@@ -15,7 +15,7 @@ def parse_commandline(args=None):
     parser.add_option("--access-secret", default=os.environ.get('ACCESS_SECRET', None))
     return parser.parse_args(args)
 
-# Sub-commands for select Twitter feeds
+# Sub-commands for select Twitter feeds.
 def timeline(api):
     "Display recent tweets from users timeline"
     for status in api.timeline:
@@ -31,14 +31,14 @@ def retweets(api):
     for status in api.retweets:
         print u"%s: %s" % (status.user.screen_name, status.text)
 
-# Maps sub-command names to function calls
+# Maps sub-command names to function calls.
 SUB_COMMANDS = {
     'timeline': timeline,
     'mentions': mentions,
     'retweets': retweets
 }
 
-# Command line execution
+# Command line execution.
 if __name__ == '__main__':
     opts, args = parse_commandline()
     api = twitterlib.API(
