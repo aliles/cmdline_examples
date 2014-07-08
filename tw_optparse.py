@@ -1,6 +1,5 @@
 #!/usr/bin/env python
 from optparse import OptionParser
-import sys
 import os
 
 import twitterlib
