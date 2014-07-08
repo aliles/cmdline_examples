@@ -35,9 +35,11 @@ for command line parsing.
 
 * ``tw_getopt.py``, the `getopt`_ module.
 * ``tw_optparse.py``, the `optparse`_ module.
+* ``tw_argparse.py``, the `argparse`_ module.
 
 .. _getopt: https://docs.python.org/dev/library/getopt.html
 .. _optparse: https://docs.python.org/dev/library/optparse.html
+.. _argparse: https://docs.python.org/dev/library/argparse.html
 
 While the following example applications demonstrate using third party packages
 from PyPI.
