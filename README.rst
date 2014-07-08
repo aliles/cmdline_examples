@@ -44,6 +44,8 @@ from PyPI.
 
 * ``tw_cliff.py``, the `cliff`_ package.
 * ``tw_begins.py``, the `begins`_ package.
+* ``tw_docopt.py``, the `docopt`_ package.
 
 .. _cliff: http://cliff.readthedocs.org/en/latest/index.html
 .. _begins: https://pypi.python.org/pypi/begins
+.. _docopt: http://docopt.org/
