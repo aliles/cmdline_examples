@@ -13,6 +13,7 @@ ENV_VARS = {
     '--access-secret': 'ACCESS_SECRET'
 }
 
+
 # Process command line using getopt module.
 def parse_commandline(args=None):
     "Process command line using getopt"
@@ -30,16 +31,19 @@ def parse_commandline(args=None):
         opts[flag] = os.environ[ENV_VARS[flag]]
     return opts, args
 
+
 # Sub-commands for select Twitter feeds.
 def timeline(api):
     "Display recent tweets from users timeline"
     for status in api.timeline:
         print u"%s: %s" % (status.user.screen_name, status.text)
 
+
 def mentions(api):
     "Display recent tweets mentioning user"
     for status in api.mentions:
         print u"%s: %s" % (status.user.screen_name, status.text)
+
 
 def retweets(api):
     "Display recent retweets from user's timeline"
