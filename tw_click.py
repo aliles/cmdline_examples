@@ -16,6 +16,7 @@ def app(ctx, api_key, api_secret, access_token, access_secret):
     api = twitterlib.API(api_key, api_secret, access_token, access_secret)
     ctx.obj['API'] = api
 
+
 # Sub-command definitions using command decorator from main program.
 @app.command()
 @click.pass_context
@@ -24,12 +25,14 @@ def timeline(ctx):
     for status in ctx.obj['API'].timeline:
         print u"%s: %s" % (status.user.screen_name, status.text)
 
+
 @app.command()
 @click.pass_context
 def mentions(ctx):
     "Display recent tweets mentioning user"
     for status in ctx.obj['API'].mentions:
         print u"%s: %s" % (status.user.screen_name, status.text)
+
 
 @app.command()
 @click.pass_context
