@@ -31,21 +31,25 @@ ENV_VARS = {
     '--access-secret': 'ACCESS_SECRET'
 }
 
+
 # Sub-commands for select Twitter feeds.
 def timeline(api):
     "Display recent tweets from users timeline"
     for status in api.timeline:
         print u"%s: %s" % (status.user.screen_name, status.text)
 
+
 def mentions(api):
     "Display recent tweets mentioning user"
     for status in api.mentions:
         print u"%s: %s" % (status.user.screen_name, status.text)
 
+
 def retweets(api):
     "Display recent retweets from user's timeline"
     for status in api.retweets:
         print u"%s: %s" % (status.user.screen_name, status.text)
+
 
 # Maps sub-command names to function calls.
 SUB_COMMANDS = {
