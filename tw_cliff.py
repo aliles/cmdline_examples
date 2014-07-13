@@ -15,23 +15,24 @@ class TwitterCommand(Command):
 
     def open_api(self, parsed_args):
         api = twitterlib.API(parsed_args.api_key, parsed_args.api_secret,
-                parsed_args.access_token, parsed_args.access_secret)
+                             parsed_args.access_token,
+                             parsed_args.access_secret)
         return api
 
     def get_parser(self, prog_name):
         parser = super(TwitterCommand, self).get_parser(prog_name)
         parser.add_argument('--api-key',
-                required='API_KEY' not in os.environ,
-                default=os.environ.get('API_KEY', None))
+                            required='API_KEY' not in os.environ,
+                            default=os.environ.get('API_KEY', None))
         parser.add_argument('--api-secret',
-                required='API_SECRET' not in os.environ,
-                default=os.environ.get('API_SECRET', None))
+                            required='API_SECRET' not in os.environ,
+                            default=os.environ.get('API_SECRET', None))
         parser.add_argument('--access-token',
-                required='ACCESS_TOKEN' not in os.environ,
-                default=os.environ.get('ACCESS_TOKEN', None))
+                            required='ACCESS_TOKEN' not in os.environ,
+                            default=os.environ.get('ACCESS_TOKEN', None))
         parser.add_argument('--access-secret',
-                required='ACCESS_SECRET' not in os.environ,
-                default=os.environ.get('ACCESS_SECRET', None))
+                            required='ACCESS_SECRET' not in os.environ,
+                            default=os.environ.get('ACCESS_SECRET', None))
         return parser
 
 
